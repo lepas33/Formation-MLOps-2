@@ -27,9 +27,9 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Run Vulture
         run: |
-        vulture ./scripts/config.py
-        vulture ./scripts/predict.py
-        vulture ./scripts/train.py
+          vulture ./scripts/config.py
+          vulture ./scripts/predict.py
+          vulture ./scripts/train.py
       - name: Test with pytest
         run: |
           pytest
