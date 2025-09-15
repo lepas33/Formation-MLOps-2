@@ -32,6 +32,6 @@ jobs:
           vulture ./scripts/train.py
       - name: Test with pytest
         run: |
-          pytest ./tests/test_
+          pytest
 
 
