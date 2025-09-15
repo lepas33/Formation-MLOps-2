@@ -17,6 +17,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install .
       - name: Install dev dependencies
         run:  pip install -rrequirements_test.txt
       - name: Lint with flake8
@@ -31,6 +32,6 @@ jobs:
           vulture ./scripts/train.py
       - name: Test with pytest
         run: |
-          pytest
+          pytest ./tests/test_
 
 
